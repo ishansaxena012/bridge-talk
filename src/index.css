@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -39,19 +40,12 @@ All colors MUST be HSL.
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -101,5 +95,21 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+/* Custom utilities for LanguageBridge */
+@layer utilities {
+  .bridge-gradient {
+    @apply bg-gradient-bridge;
+  }
+  
+  .emotion-pulse {
+    animation: pulse-emotion 2s ease-in-out infinite;
+  }
+  
+  .text-gradient {
+    @apply bg-gradient-to-r from-bridge-blue-600 to-bridge-purple-600 bg-clip-text text-transparent;
   }
 }

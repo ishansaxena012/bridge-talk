@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,25 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Custom colors for LanguageBridge
+				'bridge-blue': {
+					50: '#eff6ff',
+					100: '#dbeafe',
+					500: '#3b82f6',
+					600: '#2563eb',
+					700: '#1d4ed8'
+				},
+				'bridge-purple': {
+					50: '#faf5ff',
+					100: '#f3e8ff',
+					500: '#8b5cf6',
+					600: '#7c3aed',
+					700: '#6d28d9'
+				},
+				'emotion-warm': '#f97316',
+				'emotion-cool': '#06b6d4',
+				'cultural-accent': '#10b981'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +103,47 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'pulse-emotion': {
+					'0%, 100%': {
+						transform: 'scale(1)',
+						opacity: '1'
+					},
+					'50%': {
+						transform: 'scale(1.05)',
+						opacity: '0.8'
+					}
+				},
+				'slide-in-up': {
+					'0%': {
+						transform: 'translateY(10px)',
+						opacity: '0'
+					},
+					'100%': {
+						transform: 'translateY(0)',
+						opacity: '1'
+					}
+				},
+				'fade-in': {
+					'0%': {
+						opacity: '0'
+					},
+					'100%': {
+						opacity: '1'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse-emotion': 'pulse-emotion 2s ease-in-out infinite',
+				'slide-in-up': 'slide-in-up 0.3s ease-out',
+				'fade-in': 'fade-in 0.5s ease-out'
+			},
+			backgroundImage: {
+				'gradient-bridge': 'linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%)',
+				'gradient-emotion': 'linear-gradient(135deg, #f97316 0%, #ef4444 100%)',
+				'gradient-cultural': 'linear-gradient(135deg, #10b981 0%, #06b6d4 100%)'
 			}
 		}
 	},
